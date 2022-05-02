@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    background-color: #ecf2f8;
+    font-family: "karla";
+}
+
+/* Html elements / Text elements */
+
+.name {padding-left: 2rem; font-size: 2rem;}
+
+h3 {font-size: 1.5rem; opacity: .9;}
+
+li {list-style: none; opacity: .7;}
+
+h2 {font-size: 2.3rem; padding: 2rem 0; line-height: 1.3;}
+
+p {font-size: 1.5rem; line-height: 1.5; opacity: .95;}
+
+.grey h3, .grey p, .grey h2, .grey li {color: #19212e;}
+
+
+/* section And testimonial Grids */
+
+section {padding: 3rem 2rem;}
+
+.testimonial{display: block; gap: 2rem;}
+
+.testimonial-grid{
+    margin-top: 2rem;
+    padding: 2rem;
+    font-size: 2.5rem;
+    border-radius: .5rem;
+}
+
+.first-grid {
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 5rem;
+    background-color: #7541c8;
+    color: white;
+    grid-area: first;
+}
+
+.second-grid {
+    background-color: #48556a;
+    color: white;
+    grid-area: second;
+}
+
+.third-grid {
+    background-color: white;
+    grid-area: third;
+}
+
+.fourth-grid {
+    background-color: #19212e;
+    color: white;
+    grid-area: fourth;
+}
+
+.fifth-grid {
+    background-color: white;
+    grid-area: fifth;
+}
+
+
+.images {
+    display: flex;
+}
+
+.testimonial-grid img {
+    border-radius: 50%;
+    width: 8%;
+}
+
+
+/* Footer / Atrribution */
+
+.attribution {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem 1rem 3rem;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+/* Media Queries */
+
+
+/* Tablet design */
+
+@media (min-width:40em){
+    .testimonial {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "first first"
+            "second fifth"
+            "third fifth"
+            "fourth fourth";
+    }
+    .testimonial-grid {
+        margin-top: 0;
+    }
+    .first-grid img,
+    .fourth-grid img {
+        width: 4% !important;
+    }
+}
+
+/* Desktop design */
+
+@media (min-width:60em) {
+
+    section {padding: 10rem 10rem 5rem;}
+
+    .testimonial-grid{margin-top: 0;}
+
+    .testimonial {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "first first second fifth"
+            "third fourth fourth fifth";
+    }
+    .first-grid img, .fourth-grid img {
+        width: 4% !important;
+    }
+}
+
+
